@@ -135,6 +135,7 @@ function getQuestionType() {
   let index;
   index = Math.round(Math.random())
   return index
+}
 
 let currentQuestion;
 let currentQuestionType;
@@ -153,7 +154,7 @@ function showQuestion() {
 
 submitButton.addEventListener("click", () => {
   const typedAns = answerInput.value.trim().toLowerCase();
-  const correctAns;
+  let correctAns;
   if (currentQuestionType == 0) {
     correctAns = currentQuestion.correctAnswer.trim().toLowerCase();
   } else {
