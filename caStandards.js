@@ -1,112 +1,113 @@
-
+const header = " What is the Accounting Standard (AS)"
+const header2 = "AS"
 const questions = [
   
   {
-    question: " What is the accounting standard 1?",
+    question: "1",
     correctAnswer: "disclosure of accounting policies",
   },
   {
-    question:  " What is the accounting standard 2?",
+    question:  "2",
     correctAnswer: "valuation of inventories",
   },
   {
-    question: " What is the accounting standard 3?",
+    question: "3",
     correctAnswer: "cash flow statement",
   },
   {
-    question:  " What is the accounting standard 4?",
+    question:  "4",
     correctAnswer: "net profit or loss for the period, prior period items and changes in accounting policies",
   },
   {
-    question:  " What is the accounting standard 5?",
+    question:  "5",
     correctAnswer: "contingencies and events occurring after the balance sheet date",
   },
   {
-    question:  " What is the accounting standard 7?",
+    question:  "7",
     correctAnswer: "construction contracts",
   },
   {
-    question:  " What is the accounting standard 9?",
+    question:  "9",
     correctAnswer: "revenue recognition",
   },
   {
-    question:  " What is the accounting standard 10?",
+    question:  "10",
     correctAnswer: "property, plant and equipment",
   },
   {
-    question: " What is the accounting standard 11?",
+    question: "11",
     correctAnswer: "the effects of changes in foreign exchange rates",
   },
   {
-    question: " What is the accounting standard 12?",
+    question: "2",
     correctAnswer: "accounting for government grants",
   },
   {
-    question:  " What is the accounting standard 13?",
+    question:  "13",
     correctAnswer: "accounting for investments",
   },
   {
-    question:  " What is the accounting standard 14?",
+    question:  "14",
     correctAnswer: "accounting for amalgamations",
   },
   {
-    question:  " What is the accounting standard 15?",
+    question:  "15",
     correctAnswer: "employee benefits",
   },
   {
-    question:  " What is the accounting standard 16?",
+    question:  "16",
     correctAnswer: "borrowing costs",
   },
   {
-    question:  " What is the accounting standard 17?",
+    question:  "17",
     correctAnswer: "segment reporting",
   },
   {
-    question:  " What is the accounting standard 18?",
+    question:  "18",
     correctAnswer: "related party disclosures",
   },
   {
-    question:  " What is the accounting standard 19?",
+    question:  "19",
     correctAnswer: "leases",
   },
   {
-    question:  " What is the accounting standard 20?",
+    question:  "20",
     correctAnswer: "earnings per share",
   },
   {
-    question:  " What is the accounting standard 21?",
+    question:  "21",
     correctAnswer: "consolidated financial statements",
   },
   {
-    question:  " What is the accounting standard 22?",
+    question:  "22",
     correctAnswer: "accounting for taxes on income",
   },
   {
-    question:  " What is the accounting standard 23?",
+    question:  "23",
     correctAnswer: "accounting for investments in associates in consolidated financial statements",
   },
   {
-    question:  " What is the accounting standard 24?",
+    question:  "24",
     correctAnswer: "discontinuing operations",
   },
   {
-    question:  " What is the accounting standard 25?",
+    question:  "25",
     correctAnswer: "interim financial reporting",
   },
   {
-    question:  " What is the accounting standard 26?",
+    question:  "26",
     correctAnswer: "intangible assets",
   },
   {
-    question:  " What is the accounting standard 27?",
+    question:  "27",
     correctAnswer: "financial reporting of interests in joint ventures",
   },
   {
-    question:  " What is the accounting standard 28?",
+    question:  "28",
     correctAnswer: "impairment of assets",
   },
   {
-    question:  " What is the accounting standard 29?",
+    question:  "29",
     correctAnswer: "provisions, contingent liabilities and contingent assets",
   },
 ];
@@ -119,7 +120,7 @@ const quizBox = document.querySelector(".quiz-container");
 
 let askedQuestions = [];
 let score = 0;
-let totalQuestions = 10;
+let totalQuestions = 15;
 
 function getRandomQuestion() {
   let index;
@@ -130,24 +131,38 @@ function getRandomQuestion() {
   return questions[index];
 }
 
+function getQuestionType() {
+  let index;
+  index = Math.round(Math.random())
+  return index
+
 let currentQuestion;
+let currentQuestionType;
 
 function showQuestion() {
   currentQuestion = getRandomQuestion();
-  questionElement.textContent = currentQuestion.question;
+  currentQuestionType = getQuestionType();
+  if (currentQuestionType == 0) {
+    questionElement.textContent = header + currentQuestion.question + " for?"
+  } else {
+    questionElement.textContent = header + " for '" + currentQuestion.correctAnswer + "'?"
+  }
   answerInput.value = "";
   resultElement.textContent = "";
 }
 
 submitButton.addEventListener("click", () => {
   const typedAns = answerInput.value.trim().toLowerCase();
-  const correctAns = currentQuestion.correctAnswer.trim().toLowerCase();
-
+  const correctAns;
+  if (currentQuestionType == 0) {
+    correctAns = currentQuestion.correctAnswer.trim().toLowerCase();
+  } else {
+    correctAns = currentQuestion.question.trim().toLowerCase();
   if (typedAns === correctAns) {
     score++;
     resultElement.textContent = "Correct hai waah!";
   } else {
-    resultElement.innerHTML = `Wrong hai chii! <br> Correct answer was: <strong>${currentQuestion.correctAnswer}</strong>`;
+    resultElement.innerHTML = `Wrong hai chii! <br> Correct answer is: <strong>${header2 + currentQuestion.question + currentQuestion.correctAnswer}</strong>`;
   }
 
   setTimeout(() => {
