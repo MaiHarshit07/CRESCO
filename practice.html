@@ -1,93 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <title>CRESCO!</title>
-    <link rel="stylesheet" href="practice.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRESCO | Quiz Hub</title>
+  <link rel="stylesheet" href="css/practice.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="images/cresco.jpg" alt="Cresco logo" />
+        <span>CRESCO</span>
+      </a>
 
-    <body>
-        <header>
-            <div class="logo_container">
-                <a href="#"><img class="img" src="cresco.jpg" alt="Cresco"></a>
-            </div>
-            <nav class="nav_bar">
-               <a href="index.html">HOME</a> 
-               <a href="#">ABOUT US<sup id="su">New</sup></a> 
-               <a href="#">LEADERBOARD</a> 
-               <a href="#">ACHIEVEMENTS</a> 
-               <a href="#">log-in</a>
-            </nav>
-            
-        <div class="search_bar">
-            <span class="material-symbols-outlined search_icon">search</span>
-            <input class="search_input" placeholder="Search For Quizes">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="#features">Features</a>
+        <a href="#top-quizzes">Top Quizzes</a>
+        <a href="#topics">Topics</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-button" href="#features">Explore</a>
+        <button class="header-button outline" type="button">Log in</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-panel">
+        <div class="hero-copy">
+          <p class="eyebrow">Quiz platform</p>
+          <h1>Play quizzes. Learn faster. Track your progress.</h1>
+          <p class="hero-text">Choose from curated quiz categories, challenge yourself and discover the best way to revise with quick fun quizzes.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="questions.html">Start a Quiz</a>
+            <a class="btn btn-secondary" href="#top-quizzes">Browse Categories</a>
+          </div>
         </div>
-            
-        <div class="action_bar">
-                <div class="action_container">
-                    <span class="material-symbols-outlined action_icon">person</span>
-                   <span CLASS="action_name">profile</span>
-                </div>
-                 <div class="action_container"> 
-                    <span class="material-symbols-outlined action_icon"> settings </span>
-                    <span CLASS="action_name">setting</span>
-                </div>
-         </div>
-        </header>
-        <main>
-                <div class="banner_container">
-                <img class="banner_image" src="Designer6.jpeg" alt="main banner">
-                </div>
-    
-            <div class="category_hedding">best quizes of all time </div>
-                <div class="category_items">
-                    <a class="sub_images" href="questions.html"><img src="gk.jpg"></a>
-                    <a class="sub_images" href="caStandards.html"><img src="accounting_standards.jpg"></a>
-                    <a class="sub_images" href="#"><img src="movies.jpg"></a>
-                    <a class="sub_images" href="#"><img src="sports.jpg"></a>
-                    <a class="sub_images" href="#"><img src="space.jpg"></a>
-                    <a class="sub_images" href="#"><img src="history.jpg"></a>
-                    <a class="sub_images" href="#"><img src="jeemains.jpg"></a>
-                    <a class="sub_images" href="#"><img src="neet.jpg"></a>
-                </div>
+
+        <div class="hero-visual">
+          <img src="images/Designer6.jpeg" alt="Online quiz platform illustration" />
+        </div>
+      </section>
+
+      <section class="search-panel" id="features">
+        <label class="search-label" for="quiz-search">Search quizzes</label>
+        <div class="search-box">
+          <span class="material-symbols-outlined search-icon">search</span>
+          <input id="quiz-search" class="search-input" type="search" placeholder="Search for quizzes, topics, or categories" aria-label="Search quizzes" />
+        </div>
+      </section>
+
+      <section class="section-block" id="top-quizzes">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Popular</p>
+            <h2>Best quizzes of all time</h2>
+          </div>
+          <a class="link-text" href="questions.html">See all quizzes</a>
+        </div>
+
+        <div class="quiz-grid">
+          <a class="quiz-card" href="questions.html">
+            <img src="images/gk.jpg" alt="General knowledge quiz" />
+            <div class="quiz-card-info">
+              <h3>General Knowledge</h3>
+              <p>Fast facts and trivia.</p>
             </div>
-            <div class="category_hedding">topicwise quizes </div>
-                <div class="category_items">
-                    <a class="sub_images" href="page1.html"><img src="history.jpg"></a>
-                    <a class="sub_images" href="#"><img src="science1.png"></a>
-                    <a class="sub_images" href="#"><img src="movies.jpg"></a>
-                    <a class="sub_images" href="#"><img src="sports.jpg"></a>
-                    <a class="sub_images" href="#"><img src="space.jpg"></a>
-                    <a class="sub_images" href="#"><img src="history.jpg"></a>
-                    <a class="sub_images" href="#"><img src="jeemains.jpg"></a>
-                    <a class="sub_images" href="#"><img src="neet.jpg"></a>
-                </div>
+          </a>
+          <a class="quiz-card" href="caStandards.html">
+            <img src="images/accounting_standards.jpg" alt="Accounting standards quiz" />
+            <div class="quiz-card-info">
+              <h3>Accounting Standards</h3>
+              <p>Practice AS questions.</p>
             </div>
-                <div class="footer_container">
-                    <div class="footer_column">
-                        <h3>HELP</h3>
-                        <a href="#">RELATED TO QUIZ</a>
-                        <a href="#">SIGN-IN/SIGN-UP</a>
-                        <a href="#">OTHERS</a>
-                    </div>
-                    <div class="footer_column">
-                        <h3>REPORT</h3>
-                        <a href="#">REPORT A QUIZ</a>
-                        <a href="#">REPORT A QUESTION</a>
-                        <a href="#"> REMOVE SOMETHING..</a>
-                    </div>
-                    <div class="footer_column">
-                        <h3>ABOUT</h3>
-                        <a href="#">CONTACT US</a>
-                        <a href="#">COLLAB</a>
-                    </div>
-                </div>
-        </main>
-        <footer>
-            <hr>
-            <div class="copyright">
-                2024 www.cresco.com All Rights Reserved By Harshit ji...
-                </div>
-        </footer>
-       </body>
+          </a>
+          <a class="quiz-card" href="questions.html">
+            <img src="images/movies.jpg" alt="Movies quiz" />
+            <div class="quiz-card-info">
+              <h3>Movies</h3>
+              <p>Film trivia and pop culture.</p>
+            </div>
+          </a>
+          <a class="quiz-card" href="questions.html">
+            <img src="images/sports.jpg" alt="Sports quiz" />
+            <div class="quiz-card-info">
+              <h3>Sports</h3>
+              <p>Test your sports knowledge.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section-block" id="topics">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Explore</p>
+            <h2>Topic-wise quizzes</h2>
+          </div>
+          <a class="link-text" href="#topics">View all topics</a>
+        </div>
+
+        <div class="quiz-grid">
+          <a class="quiz-card" href="questions.html">
+            <img src="images/history.jpg" alt="History quiz" />
+            <div class="quiz-card-info">
+              <h3>History</h3>
+              <p>Events, people and places.</p>
+            </div>
+          </a>
+          <a class="quiz-card" href="questions.html">
+            <img src="images/science1.png" alt="Science quiz" />
+            <div class="quiz-card-info">
+              <h3>Science</h3>
+              <p>Biology, chemistry, physics.</p>
+            </div>
+          </a>
+          <a class="quiz-card" href="questions.html">
+            <img src="images/space.jpg" alt="Space quiz" />
+            <div class="quiz-card-info">
+              <h3>Space</h3>
+              <p>Planets, stars, and galaxies.</p>
+            </div>
+          </a>
+          <a class="quiz-card" href="questions.html">
+            <img src="images/jeemains.jpg" alt="JEE PYQ quiz" />
+            <div class="quiz-card-info">
+              <h3>JEE PYQ</h3>
+              <p>Practice past JEE questions.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-group">
+        <div>
+          <h3>Support</h3>
+          <a href="#">Help Center</a>
+          <a href="#">Sign in</a>
+        </div>
+        <div>
+          <h3>Reports</h3>
+          <a href="#">Report a quiz</a>
+          <a href="#">Report a question</a>
+        </div>
+        <div>
+          <h3>About</h3>
+          <a href="#">Contact us</a>
+          <a href="#">Collaborate</a>
+        </div>
+      </div>
+      <p class="footer-note">© 2024 Cresco. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
 </html>
